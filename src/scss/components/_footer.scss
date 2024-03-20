@@ -4,7 +4,7 @@
 .footer {
   padding: rem(48) 0 rem(55);
   color: var(--color-white);
-  background-color: var(--color-tile-800);
+  background-color: var(--color-green-300);
 
   &__inner {
     display: flex;
@@ -16,6 +16,10 @@
 
   &__navs {
     display: flex;
+  }
+
+  .nav__link {
+    background-color: var(--color-green-300);
   }
 
   &__nav {
@@ -46,12 +50,6 @@
 
   .logo {
     margin-right: rem(70);
-    width: 100%;
-    max-width: 120px;
-
-    img {
-      width: 100%;
-    }
   }
 
   @include media(tablet) {

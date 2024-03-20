@@ -1,32 +1,40 @@
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
-@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100..800&family=Bakbak+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 :root {
-  --content-width: 1180px;
+  --content-width: 1200px;
   --container-offset: 16px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // font-family
-  --font-family-primary: "Anek Malayalam", sans-serif;
-  --font-family-secondary: "Bakbak One", sans-serif;
+  --font-family-primary: "Plus Jakarta Sans", sans-serif;
 
   // font-weight
   --fw-400: 400;
   --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
 
   // color
   --color-white: #fff;
+  --color-gray-100:#FAFAFA;
   --color-black: #1c1c1c;
-  --color-dark-900: #1b1b1b;
-  --color-gray-400: #f6f7f8;
-  --color-gray-600: #a4a4a4;
-  --color-gray-650: #a2a2a2;
-  --color-gray-700: #4b4b4b;
-  --color-tile-800: #0c3c43;
+  // --color-dark-900: #1b1b1b;
+  // --color-gray-400: #f6f7f8;
+  // --color-gray-600: #a4a4a4;
+  // --color-gray-650: #a2a2a2;
+  // --color-gray-700: #4b4b4b;
+  // --color-tile-800: #0c3c43;
+
+  --color-dark: #072125;
+  --color-green-100:rgba(238, 241, 241, 1);
+  --color-green-150: rgba(32, 72, 79, 0.08);
+  --color-green-200: #B8E4DA;
+  --color-green-250: #DCF2ED;
+  --color-green-300: #20484F;
 
   //  radius
-  --radius-main: 12px;
+  --radius-main: 8px;
 
   // shadow
   --shadow-primary: 0px 8px 8px -4px #1118270A;

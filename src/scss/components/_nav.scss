@@ -43,7 +43,7 @@
 
   &__item {
     &:not(:last-of-type, .footer .nav__item) {
-      margin-right: rem(40);
+      margin-right: 32px;
 
       @include media(mobile-l) {
         margin-right: 0;
@@ -56,16 +56,25 @@
   }
 
   &__link {
-    font-weight: var(--fw-500);
-    font-size: 20px;
-    color: var(--color-tile-800);
+    font-weight: var(--fw-400);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-white);
 
     &.true {
-      border-bottom: 2px solid var(--color-tile-800);
+      border-bottom: 2px solid var(--color-white);
     }
   }
 
   .btn {
+    padding: 9px 14px;
+    font-size: 14px;
+
+    &--link {
+      margin-right: 15px;
+      min-width: unset;
+    }
+
     @include media(mobile-l) {
       margin: 0 auto;
     }

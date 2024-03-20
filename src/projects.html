@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="uk" class="page">
-<include src="./html/_head.html" locals='{"title": "About"}'></include>
+<include src="./html/_head.html" locals='{"title": "Projects"}'></include>
 
 <body class="page__body">
   <div class="site-container">
-    <include src="./html/_header.html" locals='{"page": "about"}'></include>
+    <include src="./html/_header.html" locals='{"page": "projects"}'></include>
 
     <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+          "title": "
+            Inspiring Projects That Define Modern Living
+          ",
+          "text": "
+            Projects
+          ",
+          "image": "projects",
+          "button": "Request a Quote"
+        }
+      </include>
+
       <div class="container">
-        <include src="./html/about/_hero.html"></include>
 
         <include src="./html/about/_who.html"></include>
 

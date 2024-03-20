@@ -18,48 +18,48 @@
     padding: 20px 20px 20px rem(110);
     background-color: var(--color-white);
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 24px;
-      top: 24px;
-      border-radius: calc(var(--radius-main) + 4px);
-      width: 60px;
-      height: 60px;
-      background-image: url("../images/icons/materials.svg");
-      background-position: center;
-      background-size: 23px;
-      background-repeat: no-repeat;
-      background-color: var(--color-tile-800);
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: 24px;
+    //   top: 24px;
+    //   border-radius: calc(var(--radius-main) + 4px);
+    //   width: 60px;
+    //   height: 60px;
+    //   background-image: url("../images/icons/materials.svg");
+    //   background-position: center;
+    //   background-size: 23px;
+    //   background-repeat: no-repeat;
+    //   background-color: var(--color-tile-800);
+    // }
 
-    &--quality {
-      &::before {
-        background-image: url("../images/icons/quality.svg");
-        background-size: 22px;
-      }
-    }
+    // &--quality {
+    //   &::before {
+    //     background-image: url("../images/icons/quality.svg");
+    //     background-size: 22px;
+    //   }
+    // }
 
-    &--materials {
-      &::before {
-        background-image: url("../images/icons/materials.svg");
-        background-size: 30px;
-      }
-    }
+    // &--materials {
+    //   &::before {
+    //     background-image: url("../images/icons/materials.svg");
+    //     background-size: 30px;
+    //   }
+    // }
 
-    &--reshot {
-      &::before {
-        background-image: url("../images/icons/reshot.svg");
-        background-size: 40px;
-      }
-    }
+    // &--reshot {
+    //   &::before {
+    //     background-image: url("../images/icons/reshot.svg");
+    //     background-size: 40px;
+    //   }
+    // }
 
-    &--sustainability {
-      &::before {
-        background-image: url("../images/icons/sustainability.svg");
-        background-size: 28px;
-      }
-    }
+    // &--sustainability {
+    //   &::before {
+    //     background-image: url("../images/icons/sustainability.svg");
+    //     background-size: 28px;
+    //   }
+    // }
   }
 
   h2 {

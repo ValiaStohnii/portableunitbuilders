@@ -3,38 +3,45 @@
 
 .hero {
   $root: &;
-  padding: rem(37) 0;
 
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    border-radius: calc(var(--radius-main) * 2);
-    min-height: 584px;
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
+    aspect-ratio: 1.8 / 1;
+    padding: 0 0 0 120px;
   }
 
   &__content {
     z-index: 1;
-    padding: 0 rem(67);
+    padding: 48px;
     width: 100%;
     max-width: 720px;
-    color: var(--color-white);
+    background-color: var(--color-white);
+    border-radius: 12px;
+    max-width: 667px;
+
   }
 
   h1 {
-    margin-bottom: 24px;
-    font-size: clamp(2rem, 1.6176rem + 1.3vi, 3rem);
-    line-height: 1.07;
+    margin-bottom: 54px;
+    max-width: 571px;
   }
 
   p {
-    margin-bottom: rem(40);
-    font-size: 24px;
-    letter-spacing: 0.003em;
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.26;
+    font-weight: var(--fw-700);
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 14px 36px;
   }
 
   &--services {
