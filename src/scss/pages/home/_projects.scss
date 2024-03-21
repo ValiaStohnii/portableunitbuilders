@@ -43,4 +43,11 @@
       color: var(--color-tile-800);
     }
   }
+
+  @include media(mobile-s) {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 }

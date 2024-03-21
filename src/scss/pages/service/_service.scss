@@ -65,12 +65,35 @@
     margin: 0 auto;
   }
 
+  @include media(tablet-wide) {
+    h2 {
+      max-width: fit-content;
+      font-size: clamp(2.5rem, 2.2451rem + 1.0458vi, 3.5rem);
+    }
+  }
+
+  @include media(tablet) {
+    padding: 60px 0 0;
+
+    h2 {
+      margin: 0 auto 40px;
+    }
+
+    &__content {
+      margin: 0 auto;
+
+      &--reverse {
+        margin: 0 auto;
+      }
+  
+      &--last {
+        margin: 0 auto;; 
+      }
+    }
+  }
+
   @include media(mobile-l) {
     padding: 30px 0;
-
-    &__list {
-      margin-bottom: 30px;
-    }
 
     &__grid {
       grid-template-columns: 1fr;
@@ -93,7 +116,12 @@
     }
 
     &__content {
+      max-width: unset;
       padding: 20px;
+    }
+
+    img {
+      aspect-ratio: 16/7;
     }
   }
 }

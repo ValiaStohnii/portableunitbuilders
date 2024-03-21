@@ -121,7 +121,9 @@
     }
   }
 
-  @include media(mobile-m) {
-    grid-template-columns: 1fr;
+  @include media(mobile-s) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
