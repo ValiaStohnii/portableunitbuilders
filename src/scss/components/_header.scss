@@ -18,4 +18,10 @@
   &.hide {
     transform: translateY(-100%);
   }
+
+  @include media(mobile-sm) {
+    .logo {
+      max-width: 80%;
+    }
+  }
 }

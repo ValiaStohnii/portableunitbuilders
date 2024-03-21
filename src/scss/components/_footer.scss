@@ -2,41 +2,60 @@
 @use "../utils/mixins/"as*;
 
 .footer {
-  padding: rem(48) 0 rem(55);
-  color: var(--color-white);
+  padding: 57px 0 22px;
   background-color: var(--color-green-300);
 
+  a {
+    color: var(--color-white);
+  }
+
   &__inner {
-    display: flex;
-    align-items: center;
-    margin: 0 auto rem(30);
-    width: 100%;
-    max-width: 980px;
-  }
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--color-gray-200);
+    padding-bottom: 59px;
 
-  &__navs {
-    display: flex;
-  }
-
-  .nav__link {
-    background-color: var(--color-green-300);
-  }
-
-  &__nav {
-    &:not(:last-child) {
-      margin-right: rem(60);
-    }
-
-    p {
-      margin-bottom: 15px;
-      font-family: var(--font-family-secondary);
-      font-size: 32px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 10px;
+  &__links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-size: 20px;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+
+    a {
+      font-weight: var(--fw-700);
+      font-size: 14px;
+      line-height: 1.5;
+
+      &:not(:last-child) {
+        margin-right: 28px;
+      }
+    }
+
+    .btn--simple {
+      padding: 9px 15px;
+      font-size: 14px;
+    }
+
+    .btn--link {
+      min-width: 0;
+      font-weight: var(--fw-400);
     }
   }
 
@@ -45,22 +64,40 @@
   }
 
   &__copyrigth {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+
+    .copyrigth {
+      &__list {
+        display: flex;
+      }
+
+      &__item {
+        a {
+          font-weight: var(--fw-600);
+        }
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--color-white);
   }
 
   .logo {
-    margin-right: rem(70);
+    margin-right: 56px;
   }
 
   @include media(tablet) {
-    &__nav {
-      &:not(:last-child) {
-        margin-right: rem(40);
-      }
-
-      p {
-        font-size: 24px;
-      }
+    &__inner {
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -69,33 +106,52 @@
   }
 
   @include media(mobile-l) {
+    padding: 30px 0 22px;
+
+    .container {
+      flex-direction: column;
+    }
+
     &__inner {
-      flex-direction: column-reverse;
+      flex-direction: column;
       margin: 0 auto;
+      padding-bottom: 30px;
+    }
+
+    .logo {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+
+    &__copyrigth.container {
+      flex-direction: column-reverse;
+      padding-top: 24px;
+
+      .copyrigth {
+        &__list {
+          flex-direction: column;
+          margin-bottom: 12px;
+        }
+
+        &__item {
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 12px;
+          }
+        }
+      }
     }
   }
 
   @include media(mobile-m) {
-    &__inner {
-      align-items: baseline;
-    }
-
-    &__navs {
-      flex-direction: column;
-      margin-bottom: 40px;
-    }
-
-    &__nav {
-      margin-bottom: 40px;
-    }
-
-    &__copyrigth {
-      text-align: left;
-    }
-
     .logo {
       margin-bottom: 32px;
     }
 
+    &__links {
+      a {
+        font-size: 16px;
+      }
+    }
   }
 }

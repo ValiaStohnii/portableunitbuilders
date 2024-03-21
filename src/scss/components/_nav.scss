@@ -23,7 +23,7 @@
       padding-top: calc(var(--header-height) * 1.5);
       width: 100%;
       height: calc(var(--vh));
-      background-color: var(--color-white);
+      background-color: var(--color-green-300);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.4s;
@@ -35,6 +35,10 @@
     align-items: center;
     margin: 0 auto;
 
+    @include media(tablet-wide) {
+      margin: 0 auto;
+    }
+
     @include media(mobile-l) {
       z-index: -1;
       flex-direction: column;
@@ -45,13 +49,17 @@
     &:not(:last-of-type, .footer .nav__item) {
       margin-right: 32px;
 
+      @include media(tablet) {
+        margin-right: 12px;
+      }
+
       @include media(mobile-l) {
         margin-right: 0;
       }
     }
 
     @include media(mobile-l) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
 
@@ -73,16 +81,18 @@
     &--link {
       margin-right: 15px;
       min-width: unset;
+
+      @include media(tablet) {
+        margin-right: 12px;
+      }
+
+      @include media(mobile-l) {
+        margin: 0 auto 15px;
+      }
     }
 
     @include media(mobile-l) {
       margin: 0 auto;
-    }
-  }
-
-  @include media(mobile-l) {
-    .logo {
-      max-width: 58px;
     }
   }
 }

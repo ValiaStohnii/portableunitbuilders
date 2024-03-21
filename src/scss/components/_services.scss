@@ -96,26 +96,32 @@
 
   @include media(tablet) {
     padding: rem(60) 0;
-
-    &__item {
-      &:last-child {
-        grid-column: 1 / span 2;
-      }
-    }
   }
 
   @include media(mobile-l) {
     &__grid {
-      grid-template-columns: 1fr;
+      margin-bottom: 20px;
     }
 
     &__item {
-      padding: 24px;
-      padding-top: 96px;
+      padding-top: 70px;
 
       &:last-child {
         grid-column: auto;
       }
     }
+
+    img {
+      aspect-ratio: 16/7;
+    }
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  @include media(mobile-m) {
+    grid-template-columns: 1fr;
   }
 }

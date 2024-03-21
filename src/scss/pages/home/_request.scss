@@ -8,9 +8,9 @@
 
   &__form {
     margin-right: 175px;
-    text-align: center;
-    max-width: 588px;
     width: 100%;
+    max-width: 588px;
+    text-align: center;
   }
 
   &__content {
@@ -26,12 +26,12 @@
   }
 
   h3 {
+    margin-bottom: 28px;
     font-size: 20px;
     line-height: 1.26;
-    margin-bottom: 28px;
   }
 
-  p  {
+  p {
     font-size: 16px;
   }
 
@@ -53,93 +53,39 @@
   textarea,
   input {
     border-width: 0;
+    border-radius: var(--radius-main);
     padding: 17px 16px;
     width: 100%;
     font-family: var(--font-family-primary);
     font-weight: var(--fw-400);
     font-size: 16px;
-    resize: none;
     background-color: var(--color-green-150);
-    border-radius: var(--radius-main);
+    resize: none;
   }
 
   textarea {
-    min-height: 156px;
     margin-bottom: 10px;
+    min-height: 156px;
   }
 
   .btn {
+    justify-content: center;
+    padding: 15px;
     width: 100%;
     max-width: unset;
     text-align: center;
-    justify-content: center;
-    padding: 15px;
   }
 
-  &--contact {
-    padding: rem(73) 0 rem(39);
-
-    h2 {
-      margin-bottom: rem(23);
-      font-size: clamp(32px, 2rem + 1vi, 56px);
-    }
-
-    h3 {
-      margin: 0 auto 8px;
-    }
-
-    a {
-      margin-bottom: rem(37);
-    }
-
-    #{$root}__form {
-      margin: 0;
-
-      p {
-        font-size: 32px;
-      }
-    }
-
-    label {
-      margin-bottom: 0;
-      width: 100%;
-    }
-
-    input {
-      width: 100%;
-      max-width: 100%;
-      border-radius: var(--radius-main);
-      background-color: var(--color-white);
-    }
-
-    textarea {
-      margin-top: 16px;
-      width: 100%;
-      height: 120px;
-      max-width: 100%;
-    }
-
-    .btn {
-      max-width: none;
-      text-align: center;
-      justify-content: center;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    @include media(mobile-l) {
-      .request__form p {
-        font-family: var(--font-family-secondary);
-        text-align: left;
-        line-height: 1.2;
-      }
-    }
+  &--projects {
+    padding: 83px 0 81px;
   }
 
   @include media(tablet) {
     padding: rem(60) 0;
+
+    &__content {
+      flex-direction: column;
+    }
 
     &__form {
       margin-bottom: 20px;
@@ -147,34 +93,23 @@
 
     a {
       margin-bottom: 20px;
-      font-size: 20px;
+      font-size: 16px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__form {
+      margin-right: 0;
+      width: 100%;
+      max-width: unset;
     }
   }
 
   @include media(mobile-m) {
     border-radius: calc(var(--radius-main) * 2) calc(var(--radius-main) * 2) 0 0;
 
-    &__form-field,
-    &__form-box {
-      flex-direction: column;
-      gap: 5px;
-    }
-
     .request__btn {
       display: none;
-    }
-
-    .btn--send {
-      max-width: none;
-      text-align: center;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    .btn--send span {
-      display: block;
     }
 
     h2,
@@ -186,10 +121,9 @@
     }
 
     textarea {
+      overflow: hidden;
       margin-bottom: 20px;
       height: 120px;
-      overflow: hidden;
     }
-
   }
 }
