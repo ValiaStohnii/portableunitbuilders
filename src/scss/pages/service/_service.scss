@@ -120,6 +120,21 @@
       padding: 20px;
     }
 
+    h2 {
+      padding: 0 16px;
+      font-size: 34px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    h2, h3 {
+      br {
+        display: none;
+      }
+    }
+
     img {
       aspect-ratio: 16/7;
     }

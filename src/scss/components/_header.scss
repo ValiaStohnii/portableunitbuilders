@@ -19,6 +19,12 @@
     transform: translateY(-100%);
   }
 
+  @include media(mobile-l) {
+    .logo {
+      max-width: 200px;
+    }
+  }
+
   @include media(mobile-sm) {
     .logo {
       max-width: 80%;

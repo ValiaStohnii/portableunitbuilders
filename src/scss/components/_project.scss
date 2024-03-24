@@ -7,9 +7,21 @@
   padding: 119px 0 71px;
 
   h2 {
-    margin-bottom: 82px;
+    position: relative;
+    margin-bottom: 45px;
+    padding-bottom: 90px;
+    width: 100%;
     max-width: 332px;
     font-size: 32px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 159px;
+      width: 108px;
+      height: 8px;
+      background-color: var(--color-green-200);
+    }
   }
 
   p {
@@ -23,13 +35,10 @@
     img {
       margin-bottom: 36px;
     }
-  }
 
-  &__divider {
-    margin-bottom: 45px;
-    width: 108px;
-    height: 8px;
-    background-color: var(--color-green-200);
+    &--title {
+      margin-right: 20px;
+    }
   }
 
   &--reverse {
@@ -37,11 +46,24 @@
     padding: 113px 0 101px;
 
     h2 {
-      margin-bottom: 122px;
+      position: relative;
+      margin-bottom: 45px;
+      padding-bottom: 130px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 160px;
+        width: 108px;
+        height: 8px;
+        background-color: var(--color-green-200);
+      }
     }
 
     .project__content--title {
       align-items: flex-end;
+      margin-right: 0;
 
       img {
         margin-bottom: 0;
@@ -51,10 +73,6 @@
 
   @include media(tablet) {
     padding: 30px 0;
-
-    &__content {
-      max-width: 49%;
-    }
   }
 
   @include media(mobile-l) {
@@ -62,6 +80,11 @@
 
     h2 {
       margin-bottom: 10px;
+      padding-bottom: 40px;
+
+      &::before {
+        top: 90px;
+      }
     }
 
     &__content {
@@ -71,12 +94,22 @@
         width: 100%;
         aspect-ratio: 16 / 7;
       }
+
+      &--title {
+        margin-right: 0;
+      }
     }
 
     &--reverse {
       .project__content--title {
         img {
           margin-bottom: 30px;
+        }
+      }
+
+      h2 {
+        &::before {
+          top: 50px;
         }
       }
     }

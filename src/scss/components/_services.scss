@@ -100,7 +100,7 @@
 
   @include media(mobile-l) {
     &__grid {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     &__item {
@@ -109,6 +109,11 @@
       &:last-child {
         grid-column: auto;
       }
+    }
+
+    &__content {
+      margin-right: 0;
+      max-width: 100%;
     }
 
     img {

@@ -9,7 +9,6 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    padding: 0 0 0 120px;
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -52,10 +51,6 @@
   @include media(tablet) {
     padding: 0;
 
-    &__inner {
-      padding: 0 0 0 5%;
-    }
-
     &__content {
       padding: 40px 30px;
     }
@@ -75,11 +70,6 @@
     &__content {
       padding: 20px 30px;
       max-width: 96%;
-    }
-
-    .btn {
-      padding: 8px 15px;
-      font-size: 14px;
     }
   }
 

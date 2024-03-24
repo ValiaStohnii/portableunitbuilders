@@ -15,8 +15,6 @@
     display: flex;
 
     img {
-      width: 49%;
-
       &:first-child {
         margin-right: 20px;
       }
@@ -31,6 +29,12 @@
 
   .btn {
     padding: 15px 35px;
+  }
+
+  @include media(tablet-wide) {
+    img {
+      width: 49%;
+    }
   }
 
   @include media(tablet) {
@@ -48,6 +52,20 @@
     &__header {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    &__images {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+
+      &:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 }
